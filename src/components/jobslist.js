@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Job from "./job";
 import { FormattedMessage } from "react-intl";
+import "./jobslist.css";
+
 
 const JobsList = () => {
   console.log();
@@ -37,7 +39,8 @@ const JobsList = () => {
   return (
     <div>
       <table className="table">
-        <thead className={navigator.language.slice(0, 2) === "en" ? "thead-dark" : "thead-light"}>
+        {/* Set styles to dark if local language is english, else light*/}
+        <thead className={navigator.language.slice(0,2) === "en" ? "thead-dark" : "thead-light"}>
           <tr>
             <th scope="col">#</th>
             <th scope="col">

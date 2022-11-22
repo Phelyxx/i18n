@@ -1,5 +1,5 @@
 import React from "react";
-import { FormattedDate, FormattedMessage, FormattedPlural } from 'react-intl';
+import { FormattedDate, FormattedMessage, FormattedNumber } from 'react-intl';
 
 
 const Job = (props) => {
@@ -8,9 +8,9 @@ const Job = (props) => {
       <th scope="row">{props.offer.id}</th>
       <td>{props.offer.name}</td>
       <td>{props.offer.company}</td>
-      {/* With React intl, format salary to say million */}
       <td>
-      {props.offer.salary} <FormattedPlural value={props.offer.salary} one="million" other="millions" />
+        {/* Con React intl, mostrar el salario como un FormattedMessage que diga millones en español o millions en ingles*/}
+        <FormattedMessage id="salary-job" values={{ salary: props.offer.salary }} />
       </td>
       <td>{props.offer.city}</td>
       <td>
@@ -23,7 +23,8 @@ const Job = (props) => {
         />
       </td>
       <td>
-
+        {/* Show the number of views with a thousand separator */}
+        <FormattedNumber value={props.offer.views} />
 
       </td>
     </tr>

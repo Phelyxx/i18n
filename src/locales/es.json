@@ -4,5 +4,6 @@
     "Salary": "Salario",
     "City": "Ciudad",
     "PublicationDate": "Fecha de publicación",
-    "Views": "No. de visitas"
+    "Views": "No. de visitas",
+    "salary-job": "{salary, plural, one {# millon} other {# millones}}"
 }
